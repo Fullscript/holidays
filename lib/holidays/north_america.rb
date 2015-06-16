@@ -18,13 +18,13 @@ module Holidays
 
     def self.holidays_by_month
       {
-              0 => [{:function => lambda { |year| Holidays.easter(year)-2 }, :function_id => "easter(year)-2", :name => "Good Friday", :regions => [:ca]},
+      0 => [{:function => lambda { |year| Holidays.easter(year)-2 }, :function_id => "easter(year)-2", :name => "Good Friday", :regions => [:ca]},
             {:function => lambda { |year| Holidays.easter(year) }, :function_id => "easter(year)", :name => "Easter Sunday", :regions => [:ca]},
             {:function => lambda { |year| Holidays.easter(year)+1 }, :function_id => "easter(year)+1", :type => :informal, :name => "Easter Monday", :regions => [:ca]},
             {:function => lambda { |year| Holidays.easter(year)-2 }, :function_id => "easter(year)-2", :type => :informal, :name => "Good Friday", :regions => [:us]},
             {:function => lambda { |year| Holidays.easter(year) }, :function_id => "easter(year)", :type => :informal, :name => "Easter Sunday", :regions => [:us]}],
       1 => [{:mday => 1, :observed => lambda { |date| Holidays.to_monday_if_weekend(date) }, :observed_id => "to_monday_if_weekend", :name => "New Year's Day", :regions => [:ca]},
-            {:function => lambda { |year| Holidays.easter(year)-2 }, :function_id => "easter(year)-2", :type => :informal, :name => "Good Friday", :regions => [:us]}],
+            {:function => lambda { |year| Holidays.easter(year)-2 }, :function_id => "easter(year)-2", :type => :informal, :name => "Good Friday", :regions => [:us]},
             {:mday => 2, :name => "New Year's", :regions => [:ca_qc]},
             {:mday => 1, :name => "Año nuevo", :regions => [:mx]},
             {:mday => 6, :name => "Dia de los Santos Reyes", :regions => [:mx]},
@@ -60,7 +60,7 @@ module Holidays
             {:wday => 0, :week => 3, :type => :informal, :name => "Día del Padre", :regions => [:mx]},
             {:wday => 0, :week => 3, :type => :informal, :name => "Father's Day", :regions => [:us, :ca]}],
       7 => [{:mday => 1, :observed => lambda { |date| Holidays.to_monday_if_weekend(date) }, :observed_id => "to_monday_if_weekend", :name => "Canada Day", :regions => [:ca]},
-            {:wday => 0, :week => 3, :type => :informal, :name => "Día del Padre", :regions => [:mx]}],
+            {:wday => 0, :week => 3, :type => :informal, :name => "Día del Padre", :regions => [:mx]},
             {:mday => 12, :name => "Orangemen's Day", :regions => [:ca_nf]},
             {:mday => 9, :name => "Nunavut Day", :regions => [:ca_nu]},
             {:mday => 4, :observed => lambda { |date| Holidays.to_weekday_if_weekend(date) }, :observed_id => "to_weekday_if_weekend", :name => "Independence Day", :regions => [:us]}],
